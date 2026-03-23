@@ -1,0 +1,88 @@
+.modal {
+  background: linear-gradient(160deg, var(--card-bg) 0%, var(--card-bg-hover) 100%);
+  border-radius: 20px;
+  max-width: 440px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--border-color);
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1.4rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+.modal__close-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.modal__img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.modal__body {
+  padding: 24px;
+}
+
+.modal__name {
+  margin: 0 0 14px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+}
+
+.modal__badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.modal__details {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal__detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.92rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+}
+
+.modal__detail-label {
+  color: var(--text-muted);
+}
+
+.modal__detail-value {
+  color: var(--text-secondary);
+  text-align: right;
+  font-weight: 500;
+}
